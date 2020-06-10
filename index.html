@@ -3,14 +3,20 @@
 
 <script>
 function rodaJogo(){
+
   //Primeira fase do jogo:
   var primeiraEscolha = primeiraFase();
+
   if (primeiraEscolha == 2) {
+
     //continua jogo
       document.write("Continua jogo!");
+
   } else {
+
     //condicao de derrota
     document.write("Derrotado!");
+
   }
   
 
@@ -19,9 +25,13 @@ function rodaJogo(){
 function primeiraFase(){
   
   while (true) {
+
     var resposta = prompt("Faça sua primeira escolha: 1 ou 2");
+
     if (resposta == 1 || resposta == 2) {
+
       return resposta;
+
     }
   }
 }
@@ -29,9 +39,13 @@ function primeiraFase(){
 function segundaFase(){
   
   while (true) {
+
     var resposta = prompt("Faça sua primeira escolha: 1 ou 2");
+
     if (resposta == 1 || resposta == 2) {
+
       return resposta;
+      
     }
   }
 }
