@@ -37,7 +37,7 @@ function rodaJogo(){
 
       } else if (segundaFaseResultado == 3){
 
-        alert(" Suas mãos encostam a chave e a mesma desaparece.\n Você começa a ver o ambiente a sua volta se retorcer e, como se fosse tinta envelhecida, descascar.\n Ao fim dessa transformação, você percebe que se encontra em outro lugar completamente diferente e, é quando escuta:\n\n- Otima escolha, me pergunto o que teria te levado a isso.\n- Talvez tenha sido sorte, talvez algo que disse a ti, de qualquer forma, esta mais perto do final dessa jornada.\n\n Tão abruptamente quando como surgiu, a figura some e, você se vê sozinho em um local desconhecido.");
+        alert(" Suas mãos encostam a chave e a mesma desaparece.\n Você começa a ver o ambiente a sua volta se retorcer e, como se fosse tinta envelhecida, descascar.\n Ao fim dessa transformação, você percebe que se encontra em outro lugar completamente diferente e, é quando escuta:\n\n- Otima escolha, me pergunto o que teria te levado a isso.\n- Talvez tenha sido sorte, talvez algo que disse a ti, de qualquer forma, esta mais perto do final dessa jornada.\n\n Tão abruptamente como surgiu, a figura some, e você se vê sozinho em um local desconhecido.");
         var escolhaEspirito2 = segundoEspirito();
 
         if (escolhaEspirito2 == 1) {
@@ -49,22 +49,26 @@ function rodaJogo(){
 
           if (terceiraFaseResultado == 1) {
  
-            //resultado se 1
+            alert(" Você recolhe um pouco da vegetação morta e tenta utiliza-la para construir uma fogueira mas, a temperatura não deixa que o atrito entre gravetos produza uma fagulha\n Suas mãos começam a ficar dormente e logo, sua consciencia começa a se esvair.");
+            document.write("FIM");
            
           } else if (terceiraFaseResultado == 2) {
              
-            //resultado se 2
-           
+            alert(" Você agarra o espírito que o acompanha durante a viagem e cola seu corpo ao dele.\n O frio da noite, primeiramente, se mantem implacavel mas, algo começa a emanar do corpo que segura.\n Uma luz forte se faz presente no meio da escuridão, e a voz daquele que ajuda se faz presente:\n\n- Já estou condenado mas, deixe-me fazer algo em retribuição à sua ajuda.\n\n A luz que emana, do que antes era um ser se segurando em uma vã esperança, aquece seu corpo e te mantem vivo até o raiar do dia.\n Ao amanhecer você se levanta e encara a pilha de cinzas que se tornou seu salvador.\n Você resume sua caminhada.");
+            var final = faseFinal();
+            
           } else if (terceiraFaseResultado == 3) {
              
-            //resultado se 3
-           
+            alert(" Você junta suas mãos tentando formar uma pá para auxiliar na tarefa mas, a areia se mostra muito compacta e, sua intenção se mostra mais uma tentativa desesperada de se manter vivo, do que um plano com alguma chance de sucesso.\n Você se leva à exaustão com o esforço desnecessário e desmaia, sabendo que nunca mais acordará.");
+            document.write("FIM");
+
           }
           
         } else if (escolhaEspirito2 == 2) {
         
           alert(" As súplicas chegam aos seus ouvidos mas, a sua mente se mantem focada no líquido cristalino a sua frente.\n Você sacia sua sede e se vira para terminar sua caminhada.\n Enquanto se distancia, a ultima coisa que houve é um fraco lamento de uma alma aceitando seu fim.");
-          alert(" A caminhada dura mais um tempo mas, estando descansado, você consegue continuar sem muita dificuldade.\n Passada algumas horas (ou seriam dias? ) a névoa começa a se dissipar e, de dentro da mesma, um grande palácio se forma");
+
+          var final = faseFinal();
 
         }
 
@@ -87,15 +91,18 @@ function rodaJogo(){
 
         if (terceiraFaseResultado == 1) {
  
-          //resultado se 1
+          alert(" Você recolhe um pouco da vegetação morta e tenta utiliza-la para construir uma fogueira mas, a temperatura não deixa que o atrito entre gravetos produza uma fagulha\n Suas mãos começam a ficar dormente e logo, sua consciencia começa a se esvair.");
+          document.write("FIM");
          
         } else if (terceiraFaseResultado == 2) {
            
-          //resultado se 2
+          alert(" Você agarra o espírito que o acompanha durante a viagem e cola seu corpo ao dele.\n O frio da noite, primeiramente, se mantem implacavel mas, algo começa a emanar do corpo que segura.\n Uma luz forte se faz presente no meio da escuridão, e a voz daquele que ajuda se faz presente:\n\n- Já estou condenado mas, deixe-me fazer algo em retribuição à sua ajuda.\n\n A luz que emana, do que antes era um ser se segurando em uma vã esperança, aquece seu corpo e te mantem vivo até o raiar do dia.\n Ao amanhecer você se levanta e encara a pilha de cinzas que se tornou seu salvador.\n Você resume sua caminhada.");
+          var final = faseFinal();
          
         } else if (terceiraFaseResultado == 3) {
            
-          //resultado se 3
+          alert(" Você junta suas mãos tentando formar uma pá para auxiliar na tarefa mas, a areia se mostra muito compacta e, sua intenção se mostra mais uma tentativa desesperada de se manter vivo, do que um plano com alguma chance de sucesso.\n Você se leva à exaustão com o esforço desnecessário e desmaia, sabendo que nunca mais acordará.");
+          document.write("FIM");
          
         }
         
@@ -103,6 +110,8 @@ function rodaJogo(){
       
         alert(" As súplicas chegam aos seus ouvidos mas, a sua mente se mantem focada no líquido cristalino a sua frente.\n Você sacia sua sede e se vira para terminar sua caminhada.\n Enquanto se distancia, a ultima coisa que houve é um fraco lamento de uma alma aceitando seu fim.");
         alert(" A caminhada dura mais um tempo mas, estando descansado, você consegue continuar sem muita dificuldade.\n Passada algumas horas (ou seriam dias? ) a névoa começa a se dissipar e, de dentro da mesma, um grande palácio se forma");
+
+        var final = faseFinal();
 
       }
 
@@ -148,10 +157,11 @@ function primeiraFase(){ //inicio, discussão com o guia
 
 function segundaFase(){ //Rio das almas
 
-  while (true) {
+  alert(" Você chega na presença do barqueiro, ele estende a mão em palma aberta\n Apos um breve período ela se fecha de forma agressiva e, em um movimento rapido, com dedo em riste, aponta para uma pequena mesa disposta ao lado\n Em cima da mesa, três objetos se encontram enfileirados:\n* Uma corda arrebentada, em um arranjo espiral.\n* Uma pedra polida, capaz de refletir sua face.\n* Uma chave de ferrolho, grande demais para qualquer porta.");
+  alert(" Como se estivesse ao seu lado, a voz daquele com quem primeiro falou nesse mundo ecoa em sua cabeça:\n\n- Ah, então não possui o pagamento apropriado?\n- O barqueiro não oferece viagens gratuitas mas, existem outras maneiras de se completar a passagem pelo Rio das Almas.\n- Escolha um desses itens mas, escolha com sabedoria.\n- Um será a chave de seu sucesso, os outros dois, um caminho sem volta para o vazio.");
 
-    alert(" Você chega na presença do barqueiro, ele estende a mão em palma aberta\n Apos um breve período ela se fecha de forma agressiva e, em um movimento rapido e dedo em riste, aponta para uma pequena mesa disposta ao lado\n Em cima da mesa, três objetos se encontram enfileirados:\n* Uma corda arrebentada, em um arranjo espiral.\n* Uma pedra polida, capaz de refletir sua face.\n* Uma chave de ferrolho, grande demais para qualquer porta.");
-    alert(" Como se estivesse ao seu lado, a voz daquele com quem primeiro falou nesse mundo ecoa em sua cabeça:\n\n- Ah, então não possui o pagamento apropriado?\n- O barqueiro não oferece viagens gratuitas mas, existem outras maneiras de se completar a passagem pelo Rio das Almas.\n- Escolha um desses itens mas, escolha com sabedoria.\n- Um será a chave de seu sucesso, os outros dois, um caminho sem volta para o vazio.");
+
+  while (true) {
 
     var resposta = prompt("Escolha: 1 | 2 | 3 \n\n1. Corda\n2. Pedra\n3. Chave");
 
@@ -165,11 +175,12 @@ function segundaFase(){ //Rio das almas
 
 function terceiraFase(){ 
 
-  alert();
+  alert(" Mesmo o peso do espírito necessitado sendo quase imperceptivel, carregar algo pelas planícies desérticas onde se encontra ainda se prova uma dificuldade.\n De tempos em tempos seu corpo clama por um descanso, talvêz seja por conta o contato com outro ser que o cansa, talvêz o fato de não sentir o peso não o nulifique.\n De qualquer forma, mais uma vez exausto nesse, literal, inferno, vocês param para descansar e, sem que perceba, a noite cai.");
+  alert(" A surpresa que sente, ao descobrir que existe algo como noites no submundo, só é superada pela mudança abrupta de temperatura que vem com o anoitecer.\n Seu companheiro, então, fala:\n\n- Precisamos nos aquecer rápido, a temperatura tende a piorar com cada segundo que adentramos no noturno.\n\n Você rapidamente recobra as informações que possui do local:\n* É possivel fazer uma fogueira com os galhos espalhados pela paisagem.\n* É possivel que o calor corporal combinado seja minimamente capaz lhes manter vivos.\n* Talvez cavar um buraco seja uma boa forma de se abrigar.");
   
   while (true) {
 
-    var resposta = prompt("Escolha 1 | 2 | 3 :\n\n1. \n2. \n3. ");
+    var resposta = prompt("Escolha 1 | 2 | 3 :\n\n1. Coletar galhos para uma fogueira\n2. Abraçar seu companheiro para aproveitar o calor corporal\n3. Começar a cavar um abrigo");
 
     if (resposta == 1 || resposta == 2 || resposta == 3) {
 
@@ -181,6 +192,7 @@ function terceiraFase(){
 
 function faseFinal(){ 
 
+  alert(" A caminhada dura mais um tempo mas, estando descansado, você consegue continuar sem muita dificuldade.\n Passada algumas horas (ou seriam dias? ) a névoa começa a se dissipar e, de dentro da mesma, um grande palácio se forma\n Algo em seu âmago diz que esse é o ponto final dessa viajem, o ultimo passo para a conclusão do que quer que tenha sido essa jornada pelo fim.");
   alert();
   
   while (true) {
