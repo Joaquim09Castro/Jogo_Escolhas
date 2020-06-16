@@ -1,3 +1,5 @@
+//Função Principal (Jogo)
+
 function rodaJogo(){
   
   apresentaCenario(); //Texto introdutório
@@ -185,13 +187,13 @@ function rodaJogo(){
 
 //Funções de introdução
 
-function apresentaCenario(){
+function apresentaCenario(){ //Apresentação do cenário
 
   alert("Você acorda, sem memória, em uma sala mal iluminada\nA sua volta se encontra uma passagem e, ao lado dela, uma figura encapuzada\nA figura apenas gesticula em direção a pasagem e um som grutural, mal consideravel uma voz, emana de sua direção");
 
 }
 
-function introFinal() {
+function introFinal() { //Apresentação da ultima fase
 
   alert(" A caminhada dura mais um tempo mas, estando descansado, você consegue continuar sem muita dificuldade.\n Passada algumas horas (ou seriam dias? ) a névoa começa a se dissipar e, de dentro da mesma, um grande palácio se forma\n Algo em seu âmago diz que esse é o ponto final dessa viajem, o ultimo passo para a conclusão do que quer que tenha sido essa jornada pelo fim.");
   alert(" Você se vê frente aos portôes da construção, que ergue-se de forma a faze-lo perder a vista de seu topo\n Ao tocar na estrutura, pronto para adentrar no local, uma voz imponente se faz presente:\n\n- Entre andarilho, venha até mim e encare o julgamento\n\n Ao terminar, as portas se abrem enquanto um vento forte, vindo de dentro do palácio, quase o faz perder o equilíbrio.");
@@ -203,7 +205,7 @@ function introFinal() {
 
 //Funções de fase
 
-function primeiraFase(){ //inicio, discussão com o guia
+function primeiraFase(){ //Discussão com o guia
   
   alert("- Todos que chegam não lembram do que lhes acometeu mas, tem ciência de onde se encontram.\n- Estamos do lado de fora, onde as portas se fecham após a passagem.\n- Diga-me que lugar é esse e continue sua ultima caminhada.");
 
@@ -237,7 +239,7 @@ function segundaFase(){ //Rio das almas
   }
 }
 
-function terceiraFase(){ //Deserto do submundo
+function terceiraFase(){ //Deserto do Submundo
 
   alert(" Mesmo o peso do espírito necessitado sendo quase imperceptivel, carregar algo pelas planícies desérticas onde se encontra ainda se prova uma dificuldade.\n De tempos em tempos seu corpo clama por um descanso, talvêz seja por conta o contato com outro ser que o cansa, talvêz o fato de não sentir o peso não o nulifique.\n De qualquer forma, mais uma vez exausto nesse, literal, inferno, vocês param para descansar e, sem que perceba, a noite cai.");
   alert(" A surpresa que sente, ao descobrir que existe algo como noites no submundo, só é superada pela mudança abrupta de temperatura que vem com o anoitecer.\n Seu companheiro, então, fala:\n\n- Precisamos nos aquecer rápido, a temperatura tende a piorar com cada segundo que adentramos no noturno.\n\n Você rapidamente recobra as informações que possui do local:\n* É possivel fazer uma fogueira com os galhos espalhados pela paisagem.\n* É possivel que o calor corporal combinado seja minimamente capaz lhes manter vivos.\n* Talvez cavar um buraco seja uma boa forma de se abrigar.");
@@ -303,7 +305,7 @@ function primeiroEspirito(){ //Espírito Rio das Almas
   
 }
 
-function segundoEspirito() { //Espírito deserto do submundo
+function segundoEspirito() { //Espírito Deserto do Submundo
   
   alert(" Você passa, o que parece uma eternidade, andando sem rumo por esse novo local\n A paisagem hostil lembra um deserto\n A areia cinza queima seus pés, uma névoa vermelha cobre o horizonte e, de tempos em tempos, amontoados de galhos ressecados que, uma vez poderiam ter sido plantas, aparecem brevemente por seu caminho");
   alert(" Sua caminhada continua por mais algum tempo até que, quase sem forças, você avista uma formação surgir do horizonte carmezim\n Quando percebe o que encontrou quase lacrimeja, não fosse o completo ressecamento pelo qual passou até esse momento. Um Oasis\n Uma vez que chega mais perto, percebe uma pequena figura, ao lado da pequena poça");
@@ -323,5 +325,7 @@ function segundoEspirito() { //Espírito deserto do submundo
 
 }
 
+
+//Chama a função principal para rodar o jogo
 
 rodaJogo();
